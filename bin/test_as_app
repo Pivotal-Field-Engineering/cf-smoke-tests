@@ -15,10 +15,11 @@ check_param CF_API
 check_param CF_USER
 check_param CF_PASS
 check_param CF_ORG
-check_param CF_SPACE
+check_param CF_SMOKE_SPACE
 check_param CF_APPS_DOMAIN
 check_param DATADOG_API_KEY
 check_param DEPLOYMENT
+check_param LOGGREGATOR_ENABLED
 SLEEPY_TIME=${SLEEPY_TIME:-300}
 
 CF_SPACE_UNIQ=$(echo "${CF_SPACE}_"$(date +%Y%m%dT%H%M%S%Z))
@@ -64,7 +65,7 @@ EOF
 
 cat $CONFIG
 
-loggregator_enabled=${loggregator_enabled:-0}
+export loggregator_enabled=${LOGGREGATOR_ENABLED}
 if [[ "${loggregator_enabled}" == 0 ]]
 then
   loggregator=""
