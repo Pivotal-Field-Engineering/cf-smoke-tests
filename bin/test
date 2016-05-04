@@ -24,3 +24,4 @@ export CF_DIAL_TIMEOUT=11
 
 ginkgo -r --succinct -slowSpecThreshold=300 "$@"
 
+rm $PWD/smoke/results/CF-TRACE-*
