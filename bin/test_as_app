@@ -89,5 +89,6 @@ $DIR/listen &
 
 while true; do
   $DIR/test_and_datadog
+  rm $DIR/../smoke/results/CF-TRACE-*.txt
   sleep $SLEEPY_TIME
 done
