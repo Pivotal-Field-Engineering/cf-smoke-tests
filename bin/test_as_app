@@ -90,5 +90,5 @@ $DIR/listen &
 while true; do
   $DIR/test_and_datadog
   rm $DIR/../smoke/results/CF-TRACE-*.txt
-  sleep $SLEEPY_TIME
+  sleep $(( RANDOM % 20 + 1 + $SLEEPY_TIME))
 done
