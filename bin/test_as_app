@@ -22,7 +22,7 @@ check_param DEPLOYMENT
 check_param LOGGREGATOR_ENABLED
 SLEEPY_TIME=${SLEEPY_TIME:-300}
 
-CF_SPACE_UNIQ=$(echo "${CF_SPACE}_"$(date +%Y%m%dT%H%M%S%Z))
+CF_SPACE_UNIQ=$(echo "${CF_SMOKE_SPACE}_"$(date +%Y%m%dT%H%M%S%Z)_$(( RANDOM )))
 
 DIR=$(dirname $0)
 
