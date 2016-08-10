@@ -31,7 +31,7 @@ ELAPSED_TIME=`expr $currenttime - $starttime`
 
 curl -X POST -H "Content-type: application/json" \
   -d "{ \"series\" :
-         [{\"metric\":\"smoke.execution_time_ms\",
+         [{\"metric\":\"smoke.execution_time_seconds\",
           \"points\":[[$currenttime, $ELAPSED_TIME]],
           \"type\":\"gauge\",
           \"tags\":[\"deployment:$DEPLOYMENT\",\"loggregator_enabled:$loggregator_enabled\"]
