@@ -37,6 +37,6 @@ curl -X POST -H "Content-type: application/json" \
           \"tags\":[\"deployment:$DEPLOYMENT\",\"loggregator_enabled:$loggregator_enabled\"]
         }]
       }" \
-"https://app.datadoghq.com/api/v1/series?api_key=${datadog_key}"
+"https://app.datadoghq.com/api/v1/series?api_key=${DATADOG_API_KEY}"
 
 exit $EXITSTATUS
