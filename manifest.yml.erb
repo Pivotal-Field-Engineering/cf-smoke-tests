@@ -1,6 +1,6 @@
 ---
-memory: 1024M
-disk_quota: 2047M
+memory: <%= ENV.fetch("MEMORY_QUOTA", "1024M") %>
+disk_quota: <%= ENV.fetch("DISK_QUOTA", "2047M") %>
 instances: <%= ENV.fetch("INSTANCE_COUNT") %>
 applications:
 - name: cf-smoke-tests-<%= ENV.fetch("LOGGREGATOR_ENABLED", 0) %>
