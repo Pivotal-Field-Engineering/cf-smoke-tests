@@ -33,7 +33,7 @@ export CFPATH=${BUILDPATH}/cf-cli
 
 mkdir -p $CFPATH
 cd $CFPATH
-wget  http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.12.3/cf-linux-amd64.tgz
+wget --output-document=cf-linux-amd64.tgz https://cli.run.pivotal.io/stable?release=linux64-binary
 tar xzf cf-linux-amd64.tgz
 cd ${BUILDPATH}
 
